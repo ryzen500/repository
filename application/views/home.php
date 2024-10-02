@@ -1,6 +1,6 @@
 
 
-<h4>Recently Added</h4>
+<h4>File RKK & SPK</h4>
 <hr>
 
 <table id="example" class="table table-striped table-bordered" style="width:100%">
@@ -12,7 +12,7 @@
 </thead>
 <tbody>
 
-<?php foreach ($data->result() as $row): ?> 
+<?php foreach ($data->result() as $row): ?>
 
 <?php
 $author1	= "SELECT * FROM authors WHERE id = '$row->id_author'";
@@ -31,7 +31,7 @@ $date_new = date('d-m-Y',strtotime($row->date . "+0 days"));
   <p class="font-weight-normal"><?= $desc ?> </p>
 </div>
 </td>
-</tr> 
+</tr>
 
 <?php endforeach; ?>
 

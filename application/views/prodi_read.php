@@ -5,9 +5,9 @@
             <div class='col-xs-12'>
               <div class='box'>
                 <div class='box-header'>
-                <h3 class='box-title'>Document Read</h3>
+                <h3 class='box-title'>Folder Read</h3>
         <table class="table table-bordered">
-	    <tr><td>Document</td><td><?php echo $program_studi; ?></td></tr>
+	    <tr><td>Folder</td><td><?php echo $program_studi; ?></td></tr>
 	    <tr><td></td><td><a href="<?php echo site_url('prodi') ?>" class="btn btn-default">Cancel</a></td></tr>
 	</table>
         </div><!-- /.box-body -->

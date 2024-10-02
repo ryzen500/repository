@@ -6,16 +6,16 @@
   <title>Repository</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  
+
   <!-- Bootstrap 3.3.7 -->
   <!-- Bootstrap 3.3.7 -->
-  
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?= base_url() ?>assets/bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="<?= base_url() ?>assets/bower_components/Ionicons/css/ionicons.min.css">
   <!-- DataTables -->
-  
+
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= base_url() ?>assets/dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -26,7 +26,7 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-  
+
 
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css">
@@ -66,7 +66,7 @@
     margin: 0 auto;
   }
   .fc-unthemed .fc-today {background-color:yellow}
-  
+
   .scheduler_default_corner { display:none;}
 </style>
 
@@ -98,14 +98,17 @@
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" onclick="showhide()" style="margin-top: 15px;">
+      <!-- <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" onclick="showhide()" style="margin-top: 15px;">
         <span class="sr-only">Toggle navigation</span>
+      </a> -->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" onclick="showhide()" style=": 1px;">
+        <span class="sr-only">Toggle navigation</span><h3> RS. WILLIAM BOOTH SURABAYA</h3>
       </a>
 
 
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
-        <a href="<?= base_url() ?>auth/logout" class="btn btn-danger btn-lg" style="margin-top: 15px; margin-right:25px"><b>Logout</b></a>
+        <a href="<?= base_url() ?>auth/logout" class="btn btn-danger btn-lg" style="margin-top: 15px; margin-right:15px"><b>Logout</b></a>
       </div>
 
     </nav>
@@ -117,36 +120,36 @@
       <!-- Sidebar user panel -->
       <a href="<?= base_url() ?>profile/">
       <div class="user-panel" style="margin-top: 50px;">
-        
+
       </div>
       </a>
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        
+
         <li><a href="<?= base_url() ?>dashboard"><i class="fa fa-home"></i> <span>Dashboard </span></a></li>
-        <li><a href="<?= base_url() ?>authors"><i class="fa fa-book"></i> <span>Authors </span></a></li>        
-        <li><a href="<?= base_url() ?>prodi"><i class="fa fa-book"></i> <span>Documents </span></a></li>
-        <li><a href="<?= base_url() ?>types"><i class="fa fa-book"></i> <span>Types </span></a></li>
+        <li><a href="<?= base_url() ?>authors"><i class="fa fa-book"></i> <span>Dokter </span></a></li>
+        <li><a href="<?= base_url() ?>prodi"><i class="fa fa-book"></i> <span>Folder </span></a></li>
+        <li><a href="<?= base_url() ?>types"><i class="fa fa-book"></i> <span>Data </span></a></li>
         <li><a href="<?= base_url() ?>repository"><i class="fa fa-book"></i> <span>Repository </span></a></li>
         <li><a href="<?= base_url() ?>ubah_password"><i class="fa fa-gear"></i> <span>Ubah Password </span></a></li>
-        
+
         <!--
         <?php
         $level = $this->session->userdata('level');
         if($level == 'master'){
         ?>
         <li><a href="<?= base_url() ?>users"><i class="fa fa-users"></i> <span>Users </span></a></li>
-        <?php 
+        <?php
         }
         ?>
         -->
-        
+
       </ul>
     </section>
 
-        
+
 
     <!-- /.sidebar -->
   </aside>
@@ -155,8 +158,8 @@
   <div class="content-wrapper">
 
    <?php echo "$contents"; ?>
-      
-    
+
+
   </div>
   <!-- /.content-wrapper -->
 
@@ -168,7 +171,7 @@
     reserved.
   </footer>
 
-  
+
   <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
@@ -196,7 +199,7 @@
       'info'        : true,
       'autoWidth'   : false
     })
-    
+
   })
 </script>
 <script type="text/javascript">
@@ -205,7 +208,7 @@
       format: 'dd/mm/yyyy',
       autoclose: true
     })
-    
+
     //Date picker
     $('.datepickers').datepicker({
       format: 'dd-mm-yyyy',

@@ -1,11 +1,11 @@
-<h4>Browse by Document</h4>
+<h4>Folder</h4>
 <hr>
 
 <table id="example" class="table table-striped table-bordered" style="width:100%">
     <thead>
         <tr>
     <th width="80px">No</th>
-    <th>Program Studi</th>
+    <th>Folder</th>
         </tr>
     </thead>
 <tbody>
@@ -13,9 +13,9 @@
     $start = 0;
     foreach ($data->result() as $repository)
     {
-    
-    $query = $this->db->query("SELECT * FROM repo where id_prodi = '$repository->id' ");  
-    $num   = $query->num_rows(); 
+
+    $query = $this->db->query("SELECT * FROM repo where id_prodi = '$repository->id' ");
+    $num   = $query->num_rows();
     if ($num == 0){
         $nums = "display:none";
     }else{

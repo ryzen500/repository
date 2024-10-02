@@ -5,7 +5,7 @@
             <div class='col-xs-12'>
               <div class='box'>
                 <div class='box-header'>
-                  <h3 class='box-title'>TYPES LIST <br> <br> <?php echo anchor('types/create/','Create',array('class'=>'btn btn-danger btn-sm'));?>
+                  <h3 class='box-title'>Data List <br> <br> <?php echo anchor('types/create/','Create',array('class'=>'btn btn-danger btn-sm'));?>
 		</h3>
                 </div><!-- /.box-header -->
                 <div class='box-body'>
@@ -13,7 +13,7 @@
             <thead>
                 <tr>
                     <th width="80px">No</th>
-		    <th>Type</th>
+		    <th>Data</th>
 		    <th>Action</th>
                 </tr>
             </thead>
@@ -27,11 +27,11 @@
 		    <td><?php echo ++$start ?></td>
 		    <td><?php echo $types->type ?></td>
 		    <td style="text-align:center" width="140px">
-			<?php 
-			echo '  '; 
-			echo anchor(site_url('types/update/'.$types->id),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-danger btn-sm')); 
-			echo '  '; 
-			echo anchor(site_url('types/delete/'.$types->id),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
+			<?php
+			echo '  ';
+			echo anchor(site_url('types/update/'.$types->id),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-danger btn-sm'));
+			echo '  ';
+			echo anchor(site_url('types/delete/'.$types->id),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"');
 			?>
 		    </td>
 	        </tr>

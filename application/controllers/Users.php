@@ -28,7 +28,7 @@ class Users extends CI_Controller
     public function read($id) 
     {
         $row = $this->Users_model->get_by_id($id);
-        if ($row) {
+        if ($row) 
             $data = array(
 		'id' => $row->id,
 		'username' => $row->username,
@@ -60,8 +60,8 @@ class Users extends CI_Controller
     {
         
         $data = array(
-		'username' => $this->input->post('username',TRUE),
-		'password' => md5($this->input->post('password',TRUE)),
+		'username' => .$this->input->post('username',TRUE),
+		'password' => md5(.$this->input->post('password',TRUE)),
 		'level' => 'admin',
 	    );
 

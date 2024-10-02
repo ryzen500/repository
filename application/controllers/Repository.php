@@ -5,8 +5,8 @@ if (!defined('BASEPATH'))
 
 class Repository extends CI_Controller
 {
-    
-        
+
+
     function __construct()
     {
         parent::__construct();
@@ -18,7 +18,7 @@ class Repository extends CI_Controller
 
     public function index()
     {
-        
+
         $repository = $this->Repo_model->get_all();
 
         $data = array(
@@ -28,7 +28,7 @@ class Repository extends CI_Controller
         $this->template->load('template','repo_list', $data);
     }
 
-    public function read($id) 
+    public function read($id)
     {
         $row = $this->Repo_model->get_by_id($id);
         if ($row) {
@@ -51,15 +51,15 @@ class Repository extends CI_Controller
         }
     }
 
-    public function create() 
+    public function create()
     {
-        $sql1 = "SELECT * FROM authors";        
+        $sql1 = "SELECT * FROM authors";
         $combo1 = $this->db->query($sql1);
 
-        $sql2 = "SELECT * FROM types";        
+        $sql2 = "SELECT * FROM types";
         $combo2 = $this->db->query($sql2);
 
-        $sql3 = "SELECT * FROM prodi";        
+        $sql3 = "SELECT * FROM prodi";
         $combo3 = $this->db->query($sql3);
 
 
@@ -82,8 +82,8 @@ class Repository extends CI_Controller
 	);
         $this->template->load('template','repo_form_insert', $data);
     }
-    
-    public function create_action() 
+
+    public function create_action()
     {
         $date = $this->input->post('date',TRUE);
         $year =  date('Y',strtotime($date . "+0 days"));
@@ -116,21 +116,21 @@ class Repository extends CI_Controller
         $this->Repo_model->insert($data);
         $this->session->set_flashdata('message', 'Create Record Success');
         redirect(site_url('repository'));
-        
+
     }
-    
-    public function update($id) 
+
+    public function update($id)
     {
         $row = $this->Repo_model->get_by_id($id);
 
-        $sql1 = "SELECT * FROM authors";        
+        $sql1 = "SELECT * FROM authors";
         $combo1 = $this->db->query($sql1);
 
-        $sql2 = "SELECT * FROM types";        
+        $sql2 = "SELECT * FROM types";
         $combo2 = $this->db->query($sql2);
 
-        $sql3 = "SELECT * FROM prodi";        
-        $combo3 = $this->db->query($sql3);        
+        $sql3 = "SELECT * FROM prodi";
+        $combo3 = $this->db->query($sql3);
 
         if ($row) {
             $data = array(
@@ -156,14 +156,15 @@ class Repository extends CI_Controller
             redirect(site_url('repository'));
         }
     }
-    
-    public function update_action() 
+
+    public function update_action()
     {
         $date = $this->input->post('date',TRUE);
         $year =  date('Y',strtotime($date . "+0 days"));
 
         $config['upload_path']          = './uploads/';
-        $config['allowed_types']    = '*';
+        // $config['allowed_types']    = '*';
+        $config['allowed_types']    = '20M';
         $this->load->library('upload', $config);
         $this->upload->do_upload('file');
         $upload_data1 =  $this->upload->data();
@@ -175,7 +176,7 @@ class Repository extends CI_Controller
         $thumbnail =   $upload_data2['file_name'];
         $this->upload->initialize($config);
 
-        
+
         $data  = array(
             'date'    => $date,
             'year'    => $year,
@@ -196,10 +197,10 @@ class Repository extends CI_Controller
         $this->Repo_model->update($this->input->post('id', TRUE), $data);
         $this->session->set_flashdata('message', 'Update Record Success');
         redirect(site_url('repository'));
-        
+
     }
-    
-    public function delete($id) 
+
+    public function delete($id)
     {
         $row = $this->Repo_model->get_by_id($id);
 
@@ -213,7 +214,7 @@ class Repository extends CI_Controller
         }
     }
 
-    public function _rules() 
+    public function _rules()
     {
 	$this->form_validation->set_rules('date', 'date', 'trim|required');
 	$this->form_validation->set_rules('year', 'year', 'trim|required');

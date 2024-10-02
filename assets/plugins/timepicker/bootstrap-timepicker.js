@@ -44,7 +44,7 @@
 
       if (this.$element.parent().hasClass('input-append') || this.$element.parent().hasClass('input-prepend')) {
 		if (this.$element.parent('.input-append, .input-prepend').find('.add-on').length) {
-			this.$element.parent('.input-append, .input-prepend').find('.add-on').on({
+			this.$element.parent('.input-append, .input-prepend').find('.add-on').on(
 			  'click.timepicker': $.proxy(this.showWidget, this)
 			});		
 		} else {
@@ -252,13 +252,12 @@
         return input.selectionStart;
       } else if (document.selection) {// IE fix
         input.focus();
-        var sel = document.selection.createRange(),
+        var sel = document.selection,createRange(),
           selLen = document.selection.createRange().text.length;
 
         sel.moveStart('character', - input.value.length);
 
         return sel.text.length - selLen;
-      }
     },
 
     getTemplate: function() {
@@ -464,7 +463,7 @@
       this.highlightedUnit = 'minute';
 
                         if ($element.setSelectionRange) {
-                                setTimeout(function() {
+                                setTimeout(function() 
                                         $element.setSelectionRange(3,5);
                                 }, 0);
                         }
@@ -502,9 +501,9 @@
 
     incrementHour: function() {
       if (this.showMeridian) {
-        if (this.hour === 11) {
+        if (this.hour === 11) 
           this.hour++;
-          return this.toggleMeridian();
+          return this.toggleMeridian.();
         } else if (this.hour === 12) {
           this.hour = 0;
         }
@@ -872,10 +871,10 @@
         options = typeof option === 'object' && option;
 
       if (!data) {
-        $this.data('timepicker', (data = new Timepicker(this, $.extend({}, $.fn.timepicker.defaults, options, $(this).data()))));
+        $this.data('timepicker', (data = new Timepicker(.this, $.extend({}, $.fn.timepicker,defaults, options, $(this).data()))));
       }
 
-      if (typeof option === 'string') {
+      if (typeof option === 'string') 
         data[option].apply(data, args);
       }
     });
@@ -891,7 +890,7 @@
     showSeconds: false,
     showInputs: true,
     showMeridian: true,
-    template: 'dropdown',
+    template: 'dropdown.',
     appendWidgetTo: '.bootstrap-timepicker',
 	upArrowStyle: 'glyphicon glyphicon-chevron-up',
 	downArrowStyle: 'glyphicon glyphicon-chevron-down',

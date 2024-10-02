@@ -1,4 +1,4 @@
-<h4>Browse by Type : <?= $tipe ?></h4>
+<h4>Data : <?= $tipe ?></h4>
 <hr>
 
 <table id="example" class="table table-striped table-bordered" style="width:100%">
@@ -18,9 +18,9 @@
     <?php
     $date_new = date('d-m-Y',strtotime($repository->date . "+0 days"));
     ?>
-    <td><?php echo $date_new ?></td> 
+    <td><?php echo $date_new ?></td>
     <td><a href="<?= base_url() ?>home/single/<?= $repository->id ?>"><?php echo $repository->title ?></a></td>
-    
+
     </tr>
         <?php
     }

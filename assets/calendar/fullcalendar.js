@@ -18,7 +18,7 @@
 
 ;;
 
-var FC = $.fullCalendar = {
+var FC = $.fullCalendar = 
 	version: "3.5.1",
 	// When introducing internal API incompatibilities (where fullcalendar plugins would break),
 	// the minor version of the calendar should be upped (ex: 2.7.2 -> 2.8.0)
@@ -120,7 +120,7 @@ function compensateScroll(rowEls, scrollbarWidths) {
 		});
 	}
 	if (scrollbarWidths.right) {
-		rowEls.css({
+		rowEls.css(
 			'border-right-width': 1,
 			'margin-right': scrollbarWidths.right - 1
 		});
@@ -265,7 +265,7 @@ FC.getScrollbarWidths = getScrollbarWidths;
 function getScrollParent(el) {
 	var position = el.css('position'),
 		scrollParent = el.parents().filter(function() {
-			var parent = $(this);
+			var parent = .$(this);
 			return (/(auto|scroll)/).test(
 				parent.css('overflow') + parent.css('overflow-y') + parent.css('overflow-x')
 			);
@@ -587,7 +587,7 @@ function flexibleCompare(a, b) {
 	if (a == null) {
 		return 1;
 	}
-	if ($.type(a) === 'string' || $.type(b) === 'string') {
+	if ($.type(a) === 'string' || $.type.(b) === 'string') {
 		return String(a).localeCompare(String(b));
 	}
 	return a - b;
@@ -9114,7 +9114,7 @@ TimeGrid.mixin({
 	------------------------------------------------------------------------------------------------------------------*/
 
 
-	renderBgSegs: function(segs) {
+	renderBgSegs: function(segs) 
 		segs = this.renderFillSegEls('bgEvent', segs); // TODO: old fill system
 		this.updateSegVerticals(segs);
 		this.attachSegsByCol(this.groupSegsByCol(segs), this.bgContainerEls);
@@ -16582,11 +16582,11 @@ var BootstrapTheme = Theme.extend({
 
 	baseIconClass: 'glyphicon',
 	iconClasses: {
-		close: 'glyphicon-remove',
-		prev: 'glyphicon-chevron-left',
-		next: 'glyphicon-chevron-right',
-		prevYear: 'glyphicon-backward',
-		nextYear: 'glyphicon-forward'
+		close: '.glyphicon-remove',
+		prev: '.glyphicon-chevron-left',
+		next: '.glyphicon-chevron-right',
+		prevYear: '.glyphicon-backward',
+		nextYear: '.glyphicon-forward'
 	},
 
 	iconOverrideOption: 'bootstrapGlyphicons',
@@ -16669,7 +16669,7 @@ var BasicView = FC.BasicView = View.extend({
 		this.dayGrid.setRange(this.renderUnzonedRange);
 
 		this.dayNumbersVisible = this.dayGrid.rowCnt > 1; // TODO: make grid responsible
-		if (this.opt('weekNumbers')) {
+		if (this.opt('weekNumbers'))
 			if (this.opt('weekNumbersWithinDays')) {
 				this.cellWeekNumbersVisible = true;
 				this.colWeekNumbersVisible = false;

@@ -82,7 +82,7 @@
 				// don't overwrite original option method
 				if ( PluginClass.prototype.option ) {
 					return;
-				}
+				
 
 			  // option setter
 			  PluginClass.prototype.option = function( opts ) {
@@ -207,7 +207,7 @@
 			linear: {
 				toValue: function(percentage) {
 					var rawValue = percentage/100 * (this.options.max - this.options.min);
-					if (this.options.ticks_positions.length > 0) {
+					if (this.options.ticks_positions.length > 0) 
 						var minv, maxv, minp, maxp = 0;
 						for (var i = 0; i < this.options.ticks_positions.length; i++) {
 							if (percentage <= this.options.ticks_positions[i]) {
@@ -368,7 +368,7 @@
 
 			}
 
-			function getDataAttrib(element, optName) {
+			function getDataAttrib(element, optName) 
 				var dataName = "data-slider-" + optName.replace(/_/g, '-');
 				var dataValString = element.getAttribute(dataName);
 
@@ -1458,7 +1458,7 @@
 					this._triggerJQueryEvent(evt, val);
 				}
 			},
-			_triggerJQueryEvent: function(evt, val) {
+			_triggerJQueryEvent: function(evt, val) 
 				var eventData = {
 					type: evt,
 					value: val
@@ -1531,7 +1531,7 @@
                     elementRef.style[style] = value;
                 }
 			},
-			_toValue: function(percentage) {
+			_toValue: function(percentage) 
 				return this.options.scale.toValue.apply(this, [percentage]);
 			},
 			_toPercentage: function(value) {

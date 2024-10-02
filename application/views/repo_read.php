@@ -27,14 +27,14 @@ if($file_repo == ''){
 
 ?>
 
-	    <tr><td>Date</td><td><?php echo $date_new; ?></td></tr>
-	    <tr><td>Author</td><td><?php echo $author; ?></td></tr>
-	    <tr><td>Type</td><td><?php echo $type; ?></td></tr>
-	    <tr><td>Document</td><td><?php echo $prodi; ?></td></tr>
+	    <tr><td>Tanggal</td><td><?php echo $date_new; ?></td></tr>
+	    <tr><td>Dokter</td><td><?php echo $author; ?></td></tr>
+	    <tr><td>Data</td><td><?php echo $type; ?></td></tr>
+	    <tr><td>Folder</td><td><?php echo $prodi; ?></td></tr>
 	    <tr><td>Title</td><td><?php echo $title; ?></td></tr>
 	    <tr><td>Description</td><td><?php echo $description; ?></td></tr>
-	    <tr><td>File</td><td><?php echo $frepo; ?></td></tr>
-	    <tr><td>Thumbnail</td><td><img style="width:300px" class="img-thumbnail" src="<?= base_url() ?>uploads/<?php echo $thumb; ?>"></td></tr>
+	    <tr><td>Upload File</td><td><?php echo $frepo; ?></td></tr>
+	    <tr><td>Upload Foto</td><td><img style="width:300px" class="img-thumbnail" src="<?= base_url() ?>uploads/<?php echo $thumb; ?>"></td></tr>
 	    <tr><td></td><td><a href="<?php echo site_url('repository') ?>" class="btn btn-default">Cancel</a></td></tr>
 	</table>
         </div><!-- /.box-body -->

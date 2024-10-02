@@ -22,18 +22,19 @@ if($data->file_repo == ''){
 ?>
 
 <div class="row">
-  <div class="col-md-4">     
-  <center><img class="img-thumbnail" src="<?= base_url() ?>uploads/<?= $thumb ?>"></center>         
+  <div class="col-md-4">
+  <center><img class="img-thumbnail" src="<?= base_url() ?>uploads/<?= $thumb ?>"></center>
     <br>
-    
-    
+
+
   </div>
   <div class="col-md-8">
-    <p><b>Description: </b><br><?= $data->description ?></p>
+
     <p><b>URL: </b><br> <a target="_blank" href="<?= base_url() ?>uploads/<?= $frepo ?>"><?= base_url() ?>uploads/<?= $frepo ?> </a></p>
-    <p><b>Type: </b><br> <?= $type ?> </p>
-    <p><b>Document: </b><br> <?= $prodi1 ?> </p>
-    <p><b>Date: </b><br> <?= $date_new ?> </p>
-    <p><b>Author: </b><br> <?= $author ?> </p>
+    <p><b>Data: </b><br> <?= $type ?> </p>
+    <p><b>Folder: </b><br> <?= $prodi1 ?> </p>
+    <p><b>Tanggal: </b><br> <?= $date_new ?> </p>
+    <p><b>File: </b><br> <?= $author ?> </p>
+    <p><b>Description: </b><br><?= $data->description ?></p>
   </div>
 </div>

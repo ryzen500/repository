@@ -20,7 +20,7 @@ $prodi3    = $prodi2->program_studi;
             <div class='col-xs-12'>
               <div class='box'>
                 <div class='box-header'>
-                
+
                   <h3 class='box-title'>REPOSITORY</h3>
                       <div class='box box-primary'>
         <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data"> <table class='table table-bordered'>
@@ -28,31 +28,31 @@ $prodi3    = $prodi2->program_studi;
             <td><input type="date" class="form-control" name="date" value="<?= $date ?>"/>
         </td>
 
-        <input type="hidden" name="id" value="<?= $id ?>">        
-	    
-	    <tr><td>Author </td>
-            <td> 
+        <input type="hidden" name="id" value="<?= $id ?>">
+
+	    <tr><td>Dokter </td>
+            <td>
             <select class="form-control" name="id_author">
                 <option value="<?= $id_author ?>"> <?= $author3 ?> </option>
-                <?php foreach ($authors->result() as $row1): ?>                                
+                <?php foreach ($authors->result() as $row1): ?>
                 <option value="<?php echo $row1->id; ?>"><?php echo $row1->author; ?></option>
                 <?php endforeach; ?>
             </select>
         </td>
-	    <tr><td>Type </td>
-            <td> 
+	    <tr><td>Data </td>
+            <td>
             <select class="form-control" name="id_type">
                 <option value="<?= $id_type ?>"> <?= $type3 ?> </option>
-                <?php foreach ($types->result() as $row2): ?>                                
+                <?php foreach ($types->result() as $row2): ?>
                 <option value="<?php echo $row2->id; ?>"><?php echo $row2->type; ?></option>
                 <?php endforeach; ?>
             </select>
         </td>
-	    <tr><td>Program Studi </td>
+	    <tr><td>Folder </td>
             <td>
             <select class="form-control" name="id_prodi">
                 <option value="<?= $id_prodi ?>"> <?= $prodi3 ?> </option>
-                <?php foreach ($prodi->result() as $row3): ?>                                
+                <?php foreach ($prodi->result() as $row3): ?>
                 <option value="<?php echo $row3->id; ?>"><?php echo $row3->program_studi; ?></option>
                 <?php endforeach; ?>
             </select>
@@ -69,19 +69,18 @@ $prodi3    = $prodi2->program_studi;
             <input type="file" class="form-control" name="file" />
             <p>* Lewati ini bila tidak ingin mengubah file sebelumnya</p>
         </td>
-	    <tr><td>Thumbnail ( .jpg/.png ) </td>
+	    <tr><td>Foto ( .jpg/.png ) </td>
             <td>
             <!--<img class="img-thumbnail" src="<?= base_url() ?>uploads/<?= $thumb ?>"> -->
             <input type="file" class="form-control" name="thumbnail" />
             <p>* Lewati ini bila tidak ingin mengubah thumbnail sebelumnya</p>
         </td>
-	    <tr><td colspan='2'><button type="submit" class="btn btn-primary">Save</button> 
+	    <tr><td colspan='2'><button type="submit" class="btn btn-primary">Save</button>
 	    <a href="<?php echo site_url('repository') ?>" class="btn btn-default">Cancel</a></td></tr>
-	
+
     </table></form>
     </div><!-- /.box-body -->
               </div><!-- /.box -->
             </div><!-- /.col -->
           </div><!-- /.row -->
         </section><!-- /.content -->
-

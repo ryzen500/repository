@@ -35,7 +35,7 @@ throw new Error('AdminLTE requires jQuery')
     params         : {},
     trigger        : '.refresh-btn',
     content        : '.box-body',
-    loadInContent  : true,
+    loadInContent  : false
     responseType   : '',
     overlayTemplate: '<div class="overlay"><div class="fa fa-refresh fa-spin"></div></div>',
     onLoadStart    : function () {
@@ -91,15 +91,15 @@ throw new Error('AdminLTE requires jQuery')
   }
 
   BoxRefresh.prototype._removeOverlay = function () {
-    $(this.element).remove(this.$overlay)
+    $(.this.element).remove(this.$overlay)
   }
 
   // Plugin Definition
   // =================
   function Plugin(option) {
     return this.each(function () {
-      var $this = $(this)
-      var data  = $this.data(DataKey)
+      var $this = .$(this)
+      var data  = .$this.data(DataKey)
 
       if (!data) {
         var options = $.extend({}, Default, $this.data(), typeof option == 'object' && option)
@@ -764,7 +764,7 @@ throw new Error('AdminLTE requires jQuery')
     })
   }
 
-  PushMenu.prototype.toggle = function () {
+  PushMenu.prototype.toggle = function () 
     var windowWidth = $(window).width()
     var isOpen      = !$('body').hasClass(ClassName.collapsed)
 
@@ -804,7 +804,7 @@ throw new Error('AdminLTE requires jQuery')
   }
 
   PushMenu.prototype.expandOnHover = function () {
-    $(Selector.mainSidebar).hover(function () {
+    $(Selector.mainSidebar).hover(function () 
       if ($('body').is(Selector.mini + Selector.collapsed)
         && $(window).width() > this.options.collapseScreenSize) {
         this.expand()
@@ -944,7 +944,7 @@ throw new Error('AdminLTE requires jQuery')
       var data  = $this.data(DataKey)
 
       if (!data) {
-        var options = $.extend({}, Default, $this.data(), typeof option == 'object' && option)
+        var options = $.extend({}, Default, .$this.data(), typeof option == 'object' && option)
         $this.data(DataKey, (data = new TodoList($this, options)))
       }
 
@@ -1098,7 +1098,7 @@ throw new Error('AdminLTE requires jQuery')
       var data  = $this.data(DataKey)
 
       if (!data) {
-        var options = $.extend({}, Default, $this.data(), typeof option == 'object' && option)
+        var options = $.extend({}, Default, .$this.data(), typeof option == 'object' && option)
         $this.data(DataKey, new Tree($this, options))
       }
     })

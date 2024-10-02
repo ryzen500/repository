@@ -1,7 +1,7 @@
 <h4><?= $judul ?></h4>
 <hr>
 
-<?php foreach ($data->result() as $row): ?> 
+<?php foreach ($data->result() as $row): ?>
 
 <?php
 $author1	= "SELECT * FROM authors WHERE id = '$row->id_author'";
@@ -15,6 +15,6 @@ $desc = substr($row->description, 0, 50);
   <a href="<?= base_url() ?>home/single/<?= $row->id ?>" class="font-weight-bold" style="margin-bottom: 1px"><?= $row->title ?></a>
   <p class="font-weight-light" style="margin-bottom: 1px; font-size: 14px"><?= $author ?> (<?= $row->year ?>)</p>
   <p class="font-weight-normal"><?= $desc ?> ...</p>
-</div>  
+</div>
 
 <?php endforeach; ?>

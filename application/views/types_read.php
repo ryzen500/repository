@@ -5,9 +5,9 @@
             <div class='col-xs-12'>
               <div class='box'>
                 <div class='box-header'>
-                <h3 class='box-title'>Types Read</h3>
+                <h3 class='box-title'>Data Read</h3>
         <table class="table table-bordered">
-	    <tr><td>Type</td><td><?php echo $type; ?></td></tr>
+	    <tr><td>Data</td><td><?php echo $type; ?></td></tr>
 	    <tr><td></td><td><a href="<?php echo site_url('types') ?>" class="btn btn-default">Cancel</a></td></tr>
 	</table>
         </div><!-- /.box-body -->

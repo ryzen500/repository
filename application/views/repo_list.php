@@ -13,10 +13,10 @@
             <thead>
                 <tr>
                     <th width="80px">No</th>
-		    <th>Date</th>
-		    <th>Author</th>
-		    <th>Type</th>
-		    <th>Document</th>
+		    <th>Tanggal</th>
+		    <th>Dokter</th>
+		    <th>Data</th>
+		    <th>Folder</th>
 		    <th>Title</th>
 		    <th>Action</th>
                 </tr>
@@ -35,18 +35,18 @@
             $prodi = $this->db->query("SELECT * FROM prodi WHERE id = '$repository->id_prodi'")->row()->program_studi;
             ?>
 		    <td><?php echo ++$start ?></td>
-		    <td><?php echo $date_new ?></td>            
+		    <td><?php echo $date_new ?></td>
 		    <td><?php echo $author ?></td>
 		    <td><?php echo $type ?></td>
 		    <td><?php echo $prodi ?></td>
 		    <td><?php echo $repository->title ?></td>
 		    <td style="text-align:center" width="140px">
-			<?php 
-			echo anchor(site_url('repository/read/'.$repository->id),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-danger btn-sm')); 
-			echo '  '; 
-			echo anchor(site_url('repository/update/'.$repository->id),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-danger btn-sm')); 
-			echo '  '; 
-			echo anchor(site_url('repository/delete/'.$repository->id),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
+			<?php
+			echo anchor(site_url('repository/read/'.$repository->id),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-danger btn-sm'));
+			echo '  ';
+			echo anchor(site_url('repository/update/'.$repository->id),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-danger btn-sm'));
+			echo '  ';
+			echo anchor(site_url('repository/delete/'.$repository->id),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"');
 			?>
 		    </td>
 	        </tr>
